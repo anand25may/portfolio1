@@ -1,0 +1,4 @@
+apiVersion: v2
+name: react-app
+description: A Helm chart for a React app
+version: 0.1.0

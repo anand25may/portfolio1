@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: <your-acr-name>.azurecr.io/react-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
