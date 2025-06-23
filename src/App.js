@@ -7,10 +7,10 @@ function App() {
       <div className="max-w-4xl mx-auto py-16 px-6">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            👋 Hi, I'm Anand Gupta
+            👋 Hi, I'm Anand Gupta : Your Azure DevOps Tutor
           </h1>
           <p className="text-lg md:text-xl">
-            🚀 DevOps Engineer | Certified in Azure, Kubernetes, Terraform, Google Cloud | CI/CD | Cloud-Native Enthusiast
+            🚀 DevOps Engineer | Certified in Azure, Kubernetes(CKA), Terraform, Google Cloud | CI/CD | Cloud-Native Enthusiast
           </p>
           <p className="mt-4 text-sm text-gray-300">Deployed via Docker 🐳 | AKS ☸️ | Azure DevOps CI/CD 🚀</p>
         </header>
