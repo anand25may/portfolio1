@@ -7,7 +7,7 @@ function App() {
       <div className="max-w-4xl mx-auto py-16 px-6">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            👋 Hi, I'm Anand Gupta : Your Azure DevOps Tutor
+            👋 Hi, I'm Anand Gupta : Your Azure DevOps
           </h1>
           <p className="text-lg md:text-xl">
             🚀 DevOps Engineer | Certified in Azure, Kubernetes(CKA), Terraform, Google Cloud | CI/CD | Cloud-Native Enthusiast
