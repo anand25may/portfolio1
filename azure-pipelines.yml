@@ -5,7 +5,7 @@ pool:
   name: college   # Same agent pool used in your classic pipeline
 
 variables:
-  imageName: 'portfolio'
+  imageName: 'portfolio1'
 
 steps:
 - task: Docker@2
