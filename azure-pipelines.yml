@@ -1,47 +1,19 @@
 trigger:
-  branches:
-    include:
-      - main
+- main   # or your default branch like master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: college   # Same agent pool used in your classic pipeline
 
 variables:
-  imageName: 'react-app'
+  imageName: 'portfolio'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '18.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'Build React App'
-
 - task: Docker@2
+  displayName: 'Build and push Docker image'
   inputs:
-    containerRegistry: '<AzureContainerRegistryServiceConnection>'
-    repository: $(imageName)
+    containerRegistry: 'sakshi-acr'       # ACR service connection name
+    repository: '$(imageName)'            # Repo name in ACR
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/Dockerfile'           # Adjust if Dockerfile is not in root
     tags: |
-      latest
-
-- task: HelmInstaller@1
-  inputs:
-    helmVersionToInstall: 'latest'
-
-- task: HelmDeploy@0
-  inputs:
-    connectionType: 'Azure Resource Manager'
-    azureSubscription: '<Your Azure Subscription>'
-    azureResourceGroup: '<Your Resource Group>'
-    kubernetesCluster: '<Your AKS Cluster>'
-    namespace: 'default'
-    command: 'upgrade'
-    chartType: 'FilePath'
-    chartPath: 'helm-chart/react-app'
-    releaseName: 'react-app'
-    valueFile: 'helm-chart/react-app/values.yaml'
+      $(Build.BuildId)
