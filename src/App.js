@@ -18,7 +18,7 @@ function App() {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 border-b border-gray-600 pb-2">🌐 About Me</h2>
           <p className="text-gray-300 leading-relaxed">
-            I'm a passionate DevOps Engineer is with hands-on experience in automating, optimizing, and deploying scalable applications using modern tools and practices. I love building cloud-native solutions, managing infrastructure as code, and enabling CI/CD for fast, reliable delivery.
+            I'm a passionate DevOps Engineer with hands-on experience in automating, optimizing, and deploying scalable applications using modern tools and practices. I love building cloud-native solutions, managing infrastructure as code, and enabling CI/CD for fast, reliable delivery.
           </p>
         </section>
 
